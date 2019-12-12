@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="structThreadTask" kind="struct"><name>ThreadTask</name>
+    <member refid="structThreadTask_1a642a903e83e270fa34d604122bae7208" kind="variable"><name>file_path</name></member>
+    <member refid="structThreadTask_1a583ba45b5b44c2fde7ede384edf911fa" kind="variable"><name>file_stat</name></member>
+    <member refid="structThreadTask_1a21d20a4c8dec48d11806b3f1d73bc3a1" kind="variable"><name>term</name></member>
+  </compound>
+  <compound refid="debug_8h" kind="file"><name>debug.h</name>
+    <member refid="debug_8h_1ad72dbcf6d0153db1b8d8a58001feed83" kind="define"><name>DEBUG</name></member>
+    <member refid="debug_8h_1a792f9eb6a62648607f47b22644ad9707" kind="define"><name>DEBUG_COLOR</name></member>
+    <member refid="debug_8h_1ad86358bf19927183dd7b4ae215a29731" kind="define"><name>COLOR_RED</name></member>
+    <member refid="debug_8h_1a23c70d699a5a775bc2e1ebeb8603f630" kind="define"><name>COLOR_BLUE</name></member>
+    <member refid="debug_8h_1a17f760256046df23dd0ab46602f04d02" kind="define"><name>COLOR_RESET</name></member>
+    <member refid="debug_8h_1ac60a33fb6244dfed75a5aaab504b8968" kind="define"><name>LOGP</name></member>
+    <member refid="debug_8h_1a388edf12256bf73c3a8ee9734c3bd841" kind="define"><name>LOG</name></member>
+  </compound>
+  <compound refid="prep_8c" kind="file"><name>prep.c</name>
+    <member refid="prep_8c_1a369266c24eacffb87046522897a570d5" kind="define"><name>_GNU_SOURCE</name></member>
+    <member refid="prep_8c_1ae688d728e1acdfe5988c7db45d6f0166" kind="define"><name>PATH_MAX</name></member>
+    <member refid="prep_8c_1a951f2013d75f8111eccdeac318772223" kind="variable"><name>g_search_dir</name></member>
+    <member refid="prep_8c_1a2c4988137fce81b48cd55439099fea71" kind="variable"><name>g_exact</name></member>
+    <member refid="prep_8c_1a63892ddc1fc7686a214815e969ff6b2e" kind="variable"><name>g_num_terms</name></member>
+    <member refid="prep_8c_1a4f30c73d5f9c0beb8512ea9d524bac99" kind="variable"><name>g_search_terms</name></member>
+    <member refid="prep_8c_1a6c56da2b1c4fa1377ae582e656a1cd90" kind="variable"><name>g_threads_sem</name></member>
+    <member refid="prep_8c_1a942afea0ae77607f7f6607c22fc2e7a3" kind="variable"><name>g_output_mutex</name></member>
+    <member refid="prep_8c_1a84365b0f701e1f4a7424d21046ae2d24" kind="function"><name>print_usage</name></member>
+    <member refid="prep_8c_1a17ac2133e0f183c38683d1b2dc9e4625" kind="function"><name>run_search</name></member>
+    <member refid="prep_8c_1a09e8985683b1f4c4f8b2ab899816cb7f" kind="function"><name>output_mode</name></member>
+    <member refid="prep_8c_1a6d9555904be508f6b3ca30199c3cda25" kind="function"><name>sanitize_string</name></member>
+    <member refid="prep_8c_1adec4271d20039f44db1aed9c800edd55" kind="function"><name>is_word_char</name></member>
+    <member refid="prep_8c_1a14e7e0d2464ff3bd1811524b5ff551b8" kind="function"><name>search_line</name></member>
+    <member refid="prep_8c_1a83ce385bf93ce5b1861d7715561913ce" kind="function"><name>read_line</name></member>
+    <member refid="prep_8c_1af0b27fadadd10946cabc95449f7d7164" kind="function"><name>search_thread</name></member>
+    <member refid="prep_8c_1a7c7f889ff9a0d6505a390d04fe0f57de" kind="function"><name>search_in_file</name></member>
+    <member refid="prep_8c_1af3676a08a9d1bc8964d9565f5411ed04" kind="function"><name>search_in_directory</name></member>
+    <member refid="prep_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

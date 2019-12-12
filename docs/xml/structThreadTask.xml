@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="structThreadTask" kind="struct" language="C++" prot="public">
+    <compoundname>ThreadTask</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structThreadTask_1a642a903e83e270fa34d604122bae7208" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ThreadTask::file_path[PATH_MAX]</definition>
+        <argsstring>[PATH_MAX]</argsstring>
+        <name>file_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prep.c" line="46" column="10" bodyfile="prep.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structThreadTask_1a583ba45b5b44c2fde7ede384edf911fa" prot="public" static="no" mutable="no">
+        <type>struct stat</type>
+        <definition>struct stat ThreadTask::file_stat</definition>
+        <argsstring></argsstring>
+        <name>file_stat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prep.c" line="46" column="10" bodyfile="prep.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structThreadTask_1a21d20a4c8dec48d11806b3f1d73bc3a1" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ThreadTask::term</definition>
+        <argsstring></argsstring>
+        <name>term</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prep.c" line="52" column="10" bodyfile="prep.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure holds the arguments to the thread. </para>
+    </detaileddescription>
+    <location file="prep.c" line="44" column="1" bodyfile="prep.c" bodystart="43" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structThreadTask_1a642a903e83e270fa34d604122bae7208" prot="public" virt="non-virtual"><scope>ThreadTask</scope><name>file_path</name></member>
+      <member refid="structThreadTask_1a583ba45b5b44c2fde7ede384edf911fa" prot="public" virt="non-virtual"><scope>ThreadTask</scope><name>file_stat</name></member>
+      <member refid="structThreadTask_1a21d20a4c8dec48d11806b3f1d73bc3a1" prot="public" virt="non-virtual"><scope>ThreadTask</scope><name>term</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

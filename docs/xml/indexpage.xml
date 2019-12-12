@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Project 4: Parallel File System Search</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>See project description here: <ulink url="https://www.cs.usfca.edu/~mmalensek/cs326/assignments/project-4.html">https://www.cs.usfca.edu/~mmalensek/cs326/assignments/project-4.html</ulink> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

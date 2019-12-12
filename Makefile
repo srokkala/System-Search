@@ -3,8 +3,8 @@ bin=prep
 # Set the following to '0' to disable log messages:
 debug=1
 
-CFLAGS += -Wall -g -DDEBUG=$(debug)
-LDFLAGS +=
+CFLAGS += -Wall -g -pthread -DDEBUG=$(debug)
+LDFLAGS += -lpthread 
 
 src=prep.c
 obj=$(src:.c=.o)

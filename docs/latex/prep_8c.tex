@@ -1,0 +1,236 @@
+\hypertarget{prep_8c}{}\doxysection{prep.\+c File Reference}
+\label{prep_8c}\index{prep.c@{prep.c}}
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$semaphore.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/sysinfo.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structThreadTask}{Thread\+Task}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{prep_8c_a369266c24eacffb87046522897a570d5}\label{prep_8c_a369266c24eacffb87046522897a570d5}} 
+\#define {\bfseries \+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+\item 
+\mbox{\Hypertarget{prep_8c_ae688d728e1acdfe5988c7db45d6f0166}\label{prep_8c_ae688d728e1acdfe5988c7db45d6f0166}} 
+\#define {\bfseries P\+A\+T\+H\+\_\+\+M\+AX}~4096
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{prep_8c_a84365b0f701e1f4a7424d21046ae2d24}{print\+\_\+usage}} (char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{prep_8c_a17ac2133e0f183c38683d1b2dc9e4625}{run\+\_\+search}} (int max\+\_\+threads)
+\item 
+void \mbox{\hyperlink{prep_8c_a09e8985683b1f4c4f8b2ab899816cb7f}{output\+\_\+mode}} (struct stat file\+\_\+stat, char $\ast$buffer)
+\item 
+char $\ast$ \mbox{\hyperlink{prep_8c_a6d9555904be508f6b3ca30199c3cda25}{sanitize\+\_\+string}} (char $\ast$str)
+\item 
+bool \mbox{\hyperlink{prep_8c_adec4271d20039f44db1aed9c800edd55}{is\+\_\+word\+\_\+char}} (char c)
+\item 
+void \mbox{\hyperlink{prep_8c_a14e7e0d2464ff3bd1811524b5ff551b8}{search\+\_\+line}} (\mbox{\hyperlink{structThreadTask}{Thread\+Task}} $\ast$task, char $\ast$line, int line\+\_\+no)
+\item 
+char $\ast$ \mbox{\hyperlink{prep_8c_a83ce385bf93ce5b1861d7715561913ce}{read\+\_\+line}} (F\+I\+LE $\ast$file)
+\item 
+void $\ast$ \mbox{\hyperlink{prep_8c_af0b27fadadd10946cabc95449f7d7164}{search\+\_\+thread}} (void $\ast$arg)
+\item 
+void \mbox{\hyperlink{prep_8c_a7c7f889ff9a0d6505a390d04fe0f57de}{search\+\_\+in\+\_\+file}} (char $\ast$file\+\_\+path, struct stat file\+\_\+stat, char $\ast$term)
+\item 
+void \mbox{\hyperlink{prep_8c_af3676a08a9d1bc8964d9565f5411ed04}{search\+\_\+in\+\_\+directory}} (char $\ast$dir\+\_\+path, char $\ast$term)
+\item 
+int \mbox{\hyperlink{prep_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{prep_8c_a951f2013d75f8111eccdeac318772223}\label{prep_8c_a951f2013d75f8111eccdeac318772223}} 
+char $\ast$ {\bfseries g\+\_\+search\+\_\+dir} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{prep_8c_a2c4988137fce81b48cd55439099fea71}\label{prep_8c_a2c4988137fce81b48cd55439099fea71}} 
+bool {\bfseries g\+\_\+exact} = false
+\item 
+\mbox{\Hypertarget{prep_8c_a63892ddc1fc7686a214815e969ff6b2e}\label{prep_8c_a63892ddc1fc7686a214815e969ff6b2e}} 
+unsigned int {\bfseries g\+\_\+num\+\_\+terms} = 0
+\item 
+\mbox{\Hypertarget{prep_8c_a4f30c73d5f9c0beb8512ea9d524bac99}\label{prep_8c_a4f30c73d5f9c0beb8512ea9d524bac99}} 
+char $\ast$$\ast$ {\bfseries g\+\_\+search\+\_\+terms}
+\item 
+\mbox{\Hypertarget{prep_8c_a6c56da2b1c4fa1377ae582e656a1cd90}\label{prep_8c_a6c56da2b1c4fa1377ae582e656a1cd90}} 
+sem\+\_\+t {\bfseries g\+\_\+threads\+\_\+sem}
+\item 
+\mbox{\Hypertarget{prep_8c_a942afea0ae77607f7f6607c22fc2e7a3}\label{prep_8c_a942afea0ae77607f7f6607c22fc2e7a3}} 
+pthread\+\_\+mutex\+\_\+t {\bfseries g\+\_\+output\+\_\+mutex}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unix utility that recursively searches for matching words in text files, similar to the grep command (specifically with flags -\/Rnw). Only entire words are matched, not partial words (i.\+e., searching for \textquotesingle{}the\textquotesingle{} does not match \textquotesingle{}theme\textquotesingle{}). The line number where the matching search term was found is also printed.
+
+The tool makes use of multiple threads running in parallel to perform the search. Each file is searched by a separate thread. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{prep_8c_adec4271d20039f44db1aed9c800edd55}\label{prep_8c_adec4271d20039f44db1aed9c800edd55}} 
+\index{prep.c@{prep.c}!is\_word\_char@{is\_word\_char}}
+\index{is\_word\_char@{is\_word\_char}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{is\_word\_char()}{is\_word\_char()}}
+{\footnotesize\ttfamily bool is\+\_\+word\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+Checks if the supplied character is a word character. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ character to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if word character, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prep_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{prep_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{prep.c@{prep.c}!main@{main}}
+\index{main@{main}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+This is the program\textquotesingle{}s entry point. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & -\/ count of command-\/line arguments. \\
+\hline
+{\em argv} & -\/ command-\/line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+program exit code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prep_8c_a09e8985683b1f4c4f8b2ab899816cb7f}\label{prep_8c_a09e8985683b1f4c4f8b2ab899816cb7f}} 
+\index{prep.c@{prep.c}!output\_mode@{output\_mode}}
+\index{output\_mode@{output\_mode}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{output\_mode()}{output\_mode()}}
+{\footnotesize\ttfamily void output\+\_\+mode (\begin{DoxyParamCaption}\item[{struct stat}]{file\+\_\+stat,  }\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Outputs the mode of the file into string buffer. 
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+stat} & -\/ properties of the file. \\
+\hline
+{\em buffer} & -\/ string buffer where the mode string goes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prep_8c_a84365b0f701e1f4a7424d21046ae2d24}\label{prep_8c_a84365b0f701e1f4a7424d21046ae2d24}} 
+\index{prep.c@{prep.c}!print\_usage@{print\_usage}}
+\index{print\_usage@{print\_usage}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{print\_usage()}{print\_usage()}}
+{\footnotesize\ttfamily void print\+\_\+usage (\begin{DoxyParamCaption}\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Prints the usage and help for this program. 
+\begin{DoxyParams}{Parameters}
+{\em argv} & -\/ command line arguments. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prep_8c_a83ce385bf93ce5b1861d7715561913ce}\label{prep_8c_a83ce385bf93ce5b1861d7715561913ce}} 
+\index{prep.c@{prep.c}!read\_line@{read\_line}}
+\index{read\_line@{read\_line}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{read\_line()}{read\_line()}}
+{\footnotesize\ttfamily char$\ast$ read\+\_\+line (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+Reads a line from the file. 
+\begin{DoxyParams}{Parameters}
+{\em file} & -\/ file to read the line from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+allocated line. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prep_8c_a17ac2133e0f183c38683d1b2dc9e4625}\label{prep_8c_a17ac2133e0f183c38683d1b2dc9e4625}} 
+\index{prep.c@{prep.c}!run\_search@{run\_search}}
+\index{run\_search@{run\_search}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{run\_search()}{run\_search()}}
+{\footnotesize\ttfamily void run\+\_\+search (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+threads }\end{DoxyParamCaption})}
+
+Executes the search. 
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+threads} & -\/ maximum count of threads to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prep_8c_a6d9555904be508f6b3ca30199c3cda25}\label{prep_8c_a6d9555904be508f6b3ca30199c3cda25}} 
+\index{prep.c@{prep.c}!sanitize\_string@{sanitize\_string}}
+\index{sanitize\_string@{sanitize\_string}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{sanitize\_string()}{sanitize\_string()}}
+{\footnotesize\ttfamily char$\ast$ sanitize\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+Creates a copy of the string trimmed from both sides. 
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ string to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+processed string copy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{prep_8c_af3676a08a9d1bc8964d9565f5411ed04}\label{prep_8c_af3676a08a9d1bc8964d9565f5411ed04}} 
+\index{prep.c@{prep.c}!search\_in\_directory@{search\_in\_directory}}
+\index{search\_in\_directory@{search\_in\_directory}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{search\_in\_directory()}{search\_in\_directory()}}
+{\footnotesize\ttfamily void search\+\_\+in\+\_\+directory (\begin{DoxyParamCaption}\item[{char $\ast$}]{dir\+\_\+path,  }\item[{char $\ast$}]{term }\end{DoxyParamCaption})}
+
+Searches the term in the directory tree starting from given directory. 
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+path} & -\/ path to directory which is the root of the subtree. \\
+\hline
+{\em term} & -\/ term to search. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prep_8c_a7c7f889ff9a0d6505a390d04fe0f57de}\label{prep_8c_a7c7f889ff9a0d6505a390d04fe0f57de}} 
+\index{prep.c@{prep.c}!search\_in\_file@{search\_in\_file}}
+\index{search\_in\_file@{search\_in\_file}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{search\_in\_file()}{search\_in\_file()}}
+{\footnotesize\ttfamily void search\+\_\+in\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+path,  }\item[{struct stat}]{file\+\_\+stat,  }\item[{char $\ast$}]{term }\end{DoxyParamCaption})}
+
+Creates a thread to search the term in the given file. 
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & -\/ path to file in which we should search. \\
+\hline
+{\em file\+\_\+stat} & -\/ properties of the file. \\
+\hline
+{\em term} & -\/ term to search. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prep_8c_a14e7e0d2464ff3bd1811524b5ff551b8}\label{prep_8c_a14e7e0d2464ff3bd1811524b5ff551b8}} 
+\index{prep.c@{prep.c}!search\_line@{search\_line}}
+\index{search\_line@{search\_line}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{search\_line()}{search\_line()}}
+{\footnotesize\ttfamily void search\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structThreadTask}{Thread\+Task}} $\ast$}]{task,  }\item[{char $\ast$}]{line,  }\item[{int}]{line\+\_\+no }\end{DoxyParamCaption})}
+
+Searches the line for a term and prints result if found. 
+\begin{DoxyParams}{Parameters}
+{\em task} & -\/ thread argument with path, stats, and term. \\
+\hline
+{\em line} & -\/ text of the line. \\
+\hline
+{\em line\+\_\+no} & -\/ number of this line in the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prep_8c_af0b27fadadd10946cabc95449f7d7164}\label{prep_8c_af0b27fadadd10946cabc95449f7d7164}} 
+\index{prep.c@{prep.c}!search\_thread@{search\_thread}}
+\index{search\_thread@{search\_thread}!prep.c@{prep.c}}
+\doxysubsubsection{\texorpdfstring{search\_thread()}{search\_thread()}}
+{\footnotesize\ttfamily void$\ast$ search\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Code for a thread that searches for a term inside the file. 
+\begin{DoxyParams}{Parameters}
+{\em arg} & -\/ pointer argument of the thread call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+thread exit code. 
+\end{DoxyReturn}
